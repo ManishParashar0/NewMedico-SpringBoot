@@ -10,4 +10,11 @@ public class MedicoController {
 		return "welcome";
 
 	}
+
+	@RequestMapping("/login")
+	public String login() {
+		return null;
+
+	}
+
 }
