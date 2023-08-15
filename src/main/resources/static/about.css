@@ -1,0 +1,193 @@
+/* home design starts here */
+#home{
+    height:45vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:url('images/img-1.png') left center , rgb(253, 238, 211) ;
+    background-blend-mode: multiply;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+}
+#home .content h1{
+    font-size:35px;
+}
+#home .content .link{
+    font-size:16px;
+    text-align:center;
+}
+#home .content .link a{
+    color:var(--blueviolet);
+    transition:all 0.3s ease;
+}
+#home .content .link a:hover{
+    text-decoration:underline;
+}
+
+/* choose-us section starts here */
+#choose-us{
+    padding:50px;
+}
+#choose-us .container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto;
+}
+#choose-us .container .img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+#choose-us .container .content{
+    background:#f9f9f9;
+    padding:20px;
+}
+#choose-us .container .content h1{
+    font-size:25px;
+    font-weight:600;
+    margin-bottom:5px;
+}
+#choose-us .container .content p{
+    font-size:14px;
+    line-height:26px;
+    text-align:justify;
+    margin-bottom:15px;
+}
+
+/* client's review section starts here */
+#client{
+    padding:50px;
+    background:#f0f0f0;
+}
+#client .container{
+    margin-top:50px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+#client .container .card{
+    border:2px solid var(--ccc);
+    border-radius:5px;
+    width:340px;
+    padding:15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background:var(--white);
+}
+#client .container .img{
+    text-align:center;
+}
+#client .container .card .img img{
+    border-radius:50%;
+    height:100px;
+    width:auto;
+}
+#client .container .card  .text p{
+    font-size:14px;
+    text-align:justify;
+    text-align-last: center;
+}
+#client .container .card .rating{
+    margin-top:10px;
+    text-align:center;
+}
+#client .container .card .rating img{
+    width:50%;
+    border:2px  solid var(--ccc);
+    padding:5px;
+    border-radius:3px;
+}
+#client .container .card .title{
+    margin-top:10px;
+    display:block;
+    text-align:center;
+    font-size:16px;
+    font-weight:500;
+}
+
+/* author design starts here */
+#author{
+    padding:50px;
+}
+#author .container{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+#author .container .card{
+    border:2px solid var(--ccc);
+    border-radius:5px;
+    overflow:hidden;
+    width:300px;
+    padding-bottom:10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position:relative;
+    transition:all 0.3s ease;
+}
+#author .container  .card .img img{
+    width:100%;
+}
+#author .container  .card .title{
+    font-size:16px;
+    margin-top:5px;
+    font-weight:500;
+    text-align:center;
+}
+#author .container .card .icons{
+    position:absolute;
+    top:10px;
+    left:-100%;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    transition:all 0.3s ease;
+}
+#author .container .card:hover .author-icons{
+    left:10px;
+}
+#author .container .card .icons span{
+    display:inline-block;
+    border:2px solid var(--ccc);
+    border-radius:5px;
+    font-size:20px;
+    padding:5px 10px;
+    text-align:center;
+    cursor:pointer;
+    background:var(--white);
+    transition:all 0.3s ease;
+}
+#author .container .card .icons span i{
+    color:var(--black);
+    transition:all 0.3s ease;
+}
+#author .container .card .icons span:hover{
+    background:var(--black);
+    border-color:var(--black);
+}
+#author .container .card .icons span:hover .author-icon{
+    color:var(--white);
+}
+
+/* responsive design starts here */
+
+/* choose us design starts here */
+
+@media screen and (max-width:900px){
+    #choose-us .container{
+        grid-template-columns: 1fr;
+        grid-template-rows:repeat(2 , auto);
+    }
+}
+@media screen and (max-width:600px){
+    #choose-us{
+        padding-inline:10px;
+    }
+}
+@media screen and (max-width:500px){
+    #client , #author{
+        padding-inline:10px;
+    }
+}

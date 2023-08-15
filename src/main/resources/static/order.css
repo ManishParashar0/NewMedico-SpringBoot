@@ -1,0 +1,25 @@
+/* home design starts here */
+#home{
+    height:45vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:url('images/img-1.png') left center , rgb(253, 238, 211) ;
+    background-blend-mode: multiply;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+}
+#home .content h1{
+    font-size:35px;
+}
+#home .content .link{
+    font-size:16px;
+    text-align:center;
+}
+#home .content .link a{
+    color:var(--blueviolet);
+    transition:all 0.3s ease;
+}
+#home .content .link a:hover{
+    text-decoration:underline;
+}

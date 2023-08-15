@@ -1,0 +1,71 @@
+/* home design starts here */
+#home{
+    height:45vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:url('images/img-1.png') left center , rgb(253, 238, 211) ;
+    background-blend-mode: multiply;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+}
+#home .content h1{
+    font-size:35px;
+}
+#home .content .link{
+    font-size:16px;
+    text-align:center;
+}
+#home .content .link a{
+    color:var(--blueviolet);
+    transition:all 0.3s ease;
+}
+#home .content .link a:hover{
+    text-decoration:underline;
+}
+/* search design starts here */
+#search{
+    padding:50px 10px;
+}
+#search .search{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    column-gap:15px;
+    row-gap:10px;
+}
+#search .search input{
+    max-width:700px;
+    min-width:250px;
+    width:90%;
+    height:45px;
+    border-radius:3px;
+    border:2px solid var(--grey);
+    padding-inline:10px;
+    font-size:16px;
+    outline:none;
+    background:#f9f9f9;
+}
+#search .search button{
+    max-width:100%;
+    width:130px;
+    height:45px;
+}
+#search .box{
+    width:250px;
+    line-height:40px;
+    border:2px solid var(--grey);
+    border-radius:3px;
+    text-align:center;
+    font-size:16px;
+    color:var(--orange);
+    margin-inline:auto;
+    margin-top:20px;
+}
+
+/* responsive design starts here */
+@media screen and (max-width:430px){
+    #search .search{
+        flex-wrap:wrap;
+    }
+}

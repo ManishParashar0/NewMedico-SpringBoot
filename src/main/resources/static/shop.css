@@ -1,0 +1,142 @@
+/* home design starts here */
+#home{
+    height:45vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:url('images/img-1.png') left center , rgb(253, 238, 211) ;
+    background-blend-mode: multiply;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+}
+#home .content h1{
+    font-size:35px;
+}
+#home .content .link{
+    font-size:16px;
+    text-align:center;
+}
+#home .content .link a{
+    color:var(--blueviolet);
+    transition:all 0.3s ease;
+}
+#home .content .link a:hover{
+    text-decoration:underline;
+}
+
+/* products design starts here */
+
+#products{
+    padding:50px;
+}
+#products > h1{
+    color:var(--black);
+    font-size:3.5rem;
+    text-align:center;
+    font-weight:600;
+    margin-bottom:30px;
+}
+#products .container .card{
+    border-radius:5px;
+    border:1px solid black;
+    width:240px;
+    text-align: center;
+    padding:15px;
+    min-height:350px;
+}
+#products .container .card .img{
+    text-align:center;
+    position:relative;
+    height:230px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#products .container .card .img img{
+    max-width:150px;
+    max-height:100%;
+}
+#products .container .card .img span{
+    position:absolute;
+    background:var(--crimson);
+    color:var(--white);
+    font-size:1.6rem;
+    padding:3px 10px 3px 5px;
+    left:0;
+    top:-8px;
+    box-shadow : 0 4px 3px rgba(0,0,0,0.4);
+    border-radius:5px;
+    
+}
+#products .container .card .title{
+    font-size:1.4rem;
+    text-align:center;
+    margin:5px 0;
+}
+#products .container .card input{
+    width:100%;
+    padding-inline:10px;
+    margin-bottom:15px;
+    height:30px;
+    border:1px solid black;
+    border-radius:3px;
+}
+#products .container .card button{
+    width:150px;
+    height:35px;
+    font-size:1.4rem;
+    font-weight:400;
+}
+
+#products .container{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(3 , 240px);
+    grid-template-rows:auto;
+    justify-content:center;
+    gap:20px;
+}
+#products .learnmore{
+    text-align:center;
+    margin-top:20px;
+}
+#products .learnmore button{
+    height:40px;
+    width:150px;
+    border:none;
+    color:var(--white);
+    font-size:1.6rem;
+    background:var(--crimson);
+    border-radius:3px;
+    transition:all 0.3s ease;
+    cursor:pointer;
+}
+#products .learnmore button:hover{
+    background:var(--btnHover);
+}
+
+/* responsive design starts here */
+
+/* products design starts here */
+
+@media screen and (min-width:1200px){
+    #products .container{
+        display:flex;
+        flex-wrap:wrap;
+        gap:20px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width:900px){
+    #products .container{
+        grid-template-columns:repeat(2 , 240px);
+        grid-template-rows:repeat(3 , auto);
+    }
+}
+@media screen and (max-width:600px){
+    #products .container{
+        grid-template-columns:240px;
+        grid-template-rows:repeat(6 , auto);
+    }
+}

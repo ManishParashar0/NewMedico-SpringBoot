@@ -1,0 +1,103 @@
+/* home design starts here */
+#home{
+    height:45vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:url('images/img-1.png') left center , rgb(253, 238, 211) ;
+    background-blend-mode: multiply;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+}
+#home .content h1{
+    font-size:35px;
+}
+#home .content .link{
+    font-size:16px;
+    text-align:center;
+}
+#home .content .link a{
+    color:var(--blueviolet);
+    transition:all 0.3s ease;
+}
+#home .content .link a:hover{
+    text-decoration:underline;
+}
+
+/* details section starts here */
+#details{
+    padding:50px 10px;
+}
+#details .content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+#details .empty{
+    margin-bottom:10px;
+    font-size:15px;
+    text-align:center;
+    line-height:20px;
+    border:2px solid var(--grey);
+    background:#f9f9f9;
+    width:fit-content;
+    padding:10px;
+    border-radius:5px;
+}
+#details .content .total p{
+    text-align:center;
+    font-size:16px;
+}
+#details .content .total p span{
+    color:var(--crimson);
+}
+/* form design starts here */
+#details form h1{
+    margin-bottom:10px;
+    font-size:25px;
+}
+#details form{
+    margin-top:20px;
+    padding:20px;
+    border-radius:5px;
+    border:2px solid var(--grey);
+    background:#f9f9f9;
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+    width:800px;
+    max-width:100%;
+    margin-inline:auto;
+}
+#details form .row{
+    display:flex;
+    flex-wrap:wrap;
+    column-gap:20px;
+}
+#details form .row label{
+    font-size:16px;
+    margin-bottom:5px;
+}
+#details form .row input , #details form .row select{
+    width:100%;
+    height:40px;
+    border:2px solid var(--grey);
+    border-radius:5px;
+    padding-inline:5px;
+    font-size:15px;
+    margin-bottom:10px;
+}
+#details form .row .col{
+    flex:1;
+}
+#details form .submit button{
+    width:150px;
+    margin-top:10px;
+}
+
+/* responsive design starts here */
+@media screen and (max-width:600px){
+    #details form .row .col{
+        flex:none;
+        width:100%;
+    }
+}

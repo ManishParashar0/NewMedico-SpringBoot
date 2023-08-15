@@ -1,0 +1,302 @@
+@import "colour.css";
+*{
+    margin:0;
+    padding:0;
+    font-family:'Poppins' , sans-serif;
+    box-sizing:border-box;
+}
+html{
+    font-size:10px;
+}
+a{
+    text-decoration:none;
+    color:var(--white);
+}
+.btn{
+    width:200px;
+    height:40px;
+    background-color: var(--blueviolet);
+    border:none;
+    color:var(--white);
+    font-size:1.6rem;
+    border-radius:3px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+.btn:hover{
+    background:var(--btnHover);
+}
+.heading:not(footer .heading){
+    font-size:30px;
+    text-align:center;
+}
+/* header design starts here */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#f9f9f9;
+    padding-inline:50px;
+    height:40px;
+}
+header .icons .icon{
+    margin-inline:4px;
+    font-size:18px;
+    color:black;
+    transition:all 0.3s ease;
+}
+header .icons .icon:hover{
+    color:var(--blueviolet);
+}
+header .user a{
+    color:var(--blueviolet);
+    font-size:15px;
+    font-weight:400;
+}
+header .user a:hover{
+    text-decoration:underline;
+}
+/* navbar design starts here */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:50px;
+    padding-inline:50px;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.5);
+    border-top:1px solid rgba(0,0,0,0.1);
+    position:sticky;
+    top:0;
+    left:0;
+    width:100%;
+    background:var(--white);
+    z-index:999;
+}
+.navbar .logo span{
+    color:var(--blueviolet);
+    font-size:2rem;
+}
+.navbar nav a{
+    color:var(--black);
+    margin-inline:10px;
+    transition:all 0.2s ease;
+    font-size:1.6rem;
+    text-transform:capitalize;
+}
+.navbar nav a:hover{
+    color:var(--blueviolet);
+}
+.navbar .icons{
+    font-size:1.6rem;
+}
+.navbar .icons .icon{
+    margin-inline:5px;
+    font-size:1.8rem;
+    color:var(--black);
+    transition:all 0.2s ease;
+    cursor:pointer;
+}
+.navbar .icons .icon-3{
+    margin-right:0;
+}
+.navbar .icons .icon:hover{
+    color:var(--blueviolet);
+}
+/* menubar design */
+    .navbar .menu-bar{
+        position:absolute;
+        right:175px;
+        top:50%;
+        transform:translateY(-50%);
+        font-size:26px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        cursor:pointer;
+        color:var(--black);
+        display:none;
+    }
+    .navbar .menu-bar:hover{
+        color:var(--blueviolet);
+    }
+    .navbar .menu-bar i{
+        transition:all 0.3s ease;
+    }
+    .navbar.active .menu-bar i:before{
+        content:'\f00d';
+    }
+
+/* scrollbar design starts here */
+::-webkit-scrollbar{
+    width:15px;
+}
+::-webkit-scrollbar-track{
+    background:#f9f9f9;
+}
+::-webkit-scrollbar-thumb{
+    background:var(--blueviolet);
+    transition:all 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover{
+    background:var(--btnHover);
+}
+
+/* header design starts here */
+
+@media screen and (max-width:500px){
+    header{
+        padding-inline:25px;
+    }
+}
+
+/* footer design starts here */
+
+footer{
+    padding:50px 30px 40px 30px;
+}
+footer .container{
+    display:grid;
+    grid-template-columns:1fr 1fr 1.5fr 1fr;
+    grid-template-rows:auto;
+    column-gap:20px;
+}
+footer .container .col .heading{
+    font-size:1.8rem;
+    font-weight:600;
+    margin-bottom:30px;
+}
+footer .container .col span{
+    display:block;
+    cursor:pointer;
+}
+footer .container .col a{
+    color:var(--black);
+    font-size:1.5rem;
+    transition:all 0.3s ease;
+}
+footer .container .col a:hover{
+    color:var(--blueviolet);
+    text-decoration:underline;
+}
+footer .container .col span{
+    margin-bottom:15px;
+    transition:all 0.3s ease;
+}
+footer .container .col .icon{
+    margin-right:5px;
+    font-size:1.6rem;
+    color:var(--blueviolet);
+    transition:all 0.3s ease;
+}
+footer .container .col span:hover .icon{
+    margin-right:7px;
+}
+footer .container .col .icon-container:hover{
+    padding-left:3px;
+}
+/* copyright design starts here */
+
+.copyright{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    height:60px;
+    font-size:1.6rem;
+    border-top:2px solid var(--ccc);
+}
+.copyright .developer{
+    color:var(--blueviolet);
+    transition:all 0.3s ease;
+    cursor:pointer;
+}
+.copyright .developer:hover{
+    text-decoration:underline;
+}
+
+/* responsive design starts here */
+
+/* navbar design starts here */
+
+@media screen and (max-width:850px){
+    .navbar .menu-bar{
+        display:inline-block;
+    }
+    .navbar nav{
+        position:absolute;
+        top:100%;
+        left:0;
+        height:fit-content;
+        width:100%;
+        max-height:0;
+        overflow:hidden;
+        background:white;
+        /* border-top:1px solid var(--ccc); */
+        transition:all 0.5s ease;
+        box-shadow: 0 4px 2 px rgba(0,0,0,0.3);
+    }
+    .navbar.active nav{
+        max-height:100vh;
+    }
+    .navbar nav a{
+        display:block;
+        border-top:1px solid var(--ccc);
+        padding-left:50px;
+        text-transform:capitalize;
+        margin:0;
+        line-height:40px;
+        transition:all 0.3s ease;
+    }
+    .navbar nav a:first-child{
+        border-top:2px solid var(--ccc);
+    }
+    .navbar nav a:hover{
+        background:#f9f9f9;
+    }
+}
+
+@media screen and (max-width:500px){
+    .navbar{
+        padding-inline:25px;
+        transition:all 0.3s ease;
+    }
+    .navbar .menu-bar{
+        right:150px;
+        transition:all 0.3s ease;
+    }
+    .navbar nav a{
+        padding-left:25px;
+    }
+}
+
+/* footer design starts here */
+
+@media screen and (max-width:900px){
+    footer{
+        padding-inline:50px;
+    }
+    footer .container{
+        grid-template-columns:repeat(2 , minmax(0 , 300px)) ;
+        grid-template-rows: repeat(2 , auto);
+        row-gap:20px;
+        justify-content:center;
+        align-items:center;
+    }
+}
+@media screen and (max-width:650px){
+    footer .container{
+        grid-template-columns:1fr;
+        grid-template-rows:repeat(4 , auto);
+    }
+}
+@media screen and (max-width:400px){
+    footer{
+        padding-inline:30px;
+    }
+}
+/* copyright design starts here */
+@media screen and (max-width:400px){
+    .copyright{
+        padding-inline:10px;
+    }
+}

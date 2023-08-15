@@ -1,0 +1,63 @@
+/* home design starts here */
+#home{
+    height:45vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:url('images/img-1.png') left center , rgb(253, 238, 211) ;
+    background-blend-mode: multiply;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+}
+#home .content h1{
+    font-size:35px;
+}
+#home .content .link{
+    font-size:16px;
+    text-align:center;
+}
+#home .content .link a{
+    color:var(--blueviolet);
+    transition:all 0.3s ease;
+}
+#home .content .link a:hover{
+    text-decoration:underline;
+}
+
+/* contact design starts here */
+#contact{
+    padding:50px 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact form{
+    text-align:center;
+}
+#contact form .heading{
+    font-size:30px;
+    font-weight:500;
+}
+#contact form{
+    max-width:500px;
+    background:#f9f9f9;
+    border:2px solid var(--grey);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    padding:20px 10px;
+    border-radius:5px;
+}
+#contact form input ,  #contact form textarea{
+    width:100%;
+    height:45px;
+    font-size:15px;
+    padding-inline:5px;
+    border:2px solid var(--grey);
+    border-radius:5px;
+    margin:8px 0;
+    outline:none;
+}
+#contact form textarea{
+    overflow:hidden;
+    resize:none;
+    height:180px;
+}

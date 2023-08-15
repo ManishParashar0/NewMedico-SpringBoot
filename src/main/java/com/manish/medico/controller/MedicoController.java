@@ -1,20 +1,16 @@
 package com.manish.medico.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.manish.medico.Entity.UserEntity;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
 @Controller
 public class MedicoController {
-	@RequestMapping("/abc")
-	public String welcome() {
-		return "welcome";
-
-	}
-
-	@RequestMapping("/login")
-	public String login() {
-		return null;
-
-	}// hello
+	@Autowired
+	private UserEntity entity;
 
 }
