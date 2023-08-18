@@ -61,7 +61,6 @@ public class UserEntity {
 
 	public UserEntity() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 }
