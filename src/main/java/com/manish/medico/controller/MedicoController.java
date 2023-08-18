@@ -16,7 +16,6 @@ public class MedicoController {
 
 	@RequestMapping("Usercome")
 	String UserEnter() {
-		// he4rl;oo
 		return null;
 
 	}
