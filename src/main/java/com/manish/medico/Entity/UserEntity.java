@@ -5,7 +5,7 @@ import javax.persistence.Id;
 
 @Entity
 public class UserEntity {
-	@Id
+	@Id // define primary key
 	private int id;
 	private String name, email, password;
 	private long mobile;
